@@ -20,11 +20,3 @@ Un tema moderno y responsivo para sitios web de estudios de arquitectura, despac
 - Node.js **v16 o superior**
 - npm o yarn
 
----
-
-## 🛠️ Instalación
-
-### 1. Clonar o descargar el proyecto
-
-```bash
-cd resonance-architecture-theme
