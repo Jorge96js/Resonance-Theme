@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+/* Mobile Menu Animation */
+#mobileMenu.active {
+  transform: translateX(100%);
+}
+
+#mobileMenuOverlay.active {
+  display: block;
+}
+
+/* Hamburger Menu Animation */
+#menuBtn.active #line1 {
+  transform: rotate(45deg) translateY(12px);
+}
+
+#menuBtn.active #line2 {
+  opacity: 0;
+}
+
+#menuBtn.active #line3 {
+  transform: rotate(-45deg) translateY(-12px);
+}

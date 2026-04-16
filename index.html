@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- ===== META TAGS BÁSICOS ===== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- ===== SEO META TAGS ===== -->
+    <title>Resonance - Theme Moderno para Estudio de Arquitectura | HTML Template</title>
+    <meta name="description" content="Resonance es un theme HTML moderno, responsivo y profesional diseñado para estudios de arquitectura, despachos y profesionales. Incluye diseño responsive, animaciones suaves y documentación completa." />
+    <meta name="keywords" content="theme, HTML template, architecture studio, responsive design, Tailwind CSS, architectural portfolio, Resonance" />
+    <meta name="author" content="Resonance Theme Team" />
+    <meta name="creator" content="Resonance Theme" />
+    <meta name="publisher" content="Resonance Theme" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="language" content="Spanish" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="google-site-verification" content="" />
+    
+    <!-- ===== CANONICAL URL ===== -->
+    <link rel="canonical" href="https://resonance-theme.com/" />
+    
+    <!-- ===== FAVICON & THEME COLOR ===== -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta name="theme-color" content="#667eea" />
+    <meta name="msapplication-TileColor" content="#667eea" />
+    
+    <!-- ===== OPEN GRAPH TAGS (Facebook, LinkedIn, etc) ===== -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Resonance Theme" />
+    <meta property="og:title" content="Resonance - Theme Moderno para Estudio de Arquitectura" />
+    <meta property="og:description" content="Un theme HTML profesional y responsivo perfecto para estudios de arquitectura y despachos. Diseño moderno con Tailwind CSS y animaciones suaves." />
+    <meta property="og:url" content="https://resonance-theme.com/" />
+    <meta property="og:image" content="https://resonance-theme.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Resonance Theme Preview" />
+    <meta property="og:locale" content="es_ES" />
+    
+    <!-- ===== TWITTER CARD TAGS ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@resonance_theme" />
+    <meta name="twitter:creator" content="@resonance_theme" />
+    <meta name="twitter:title" content="Resonance - Theme Moderno para Estudio de Arquitectura" />
+    <meta name="twitter:description" content="Theme HTML profesional y responsivo para estudios de arquitectura. Diseño moderno, animaciones suaves y documentación completa." />
+    <meta name="twitter:image" content="https://resonance-theme.com/twitter-image.jpg" />
+    <meta name="twitter:image:alt" content="Resonance Theme Screenshot" />
+    
+    <!-- ===== LINKEDIN TAGS ===== -->
+    <meta property="linkedin:title" content="Resonance - Theme Moderno para Estudio de Arquitectura" />
+    <meta property="linkedin:description" content="Theme HTML profesional para estudios de arquitectura y despachos. Responsivo, moderno y fácil de personalizar." />
+    
+    <!-- ===== STYLESHEETS ===== -->
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/node_modules/aos/dist/aos.css" />
+    
+    <!-- ===== STRUCTURED DATA (JSON-LD) ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Resonance Theme",
+      "description": "Un theme HTML moderno y profesional para estudios de arquitectura y despachos",
+      "url": "https://resonance-theme.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://resonance-theme.com/search?q={search_term_string}"
+        }
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Resonance Theme",
+      "description": "Theme HTML profesional para estudios de arquitectura",
+      "url": "https://resonance-theme.com",
+      "logo": "https://resonance-theme.com/logo.svg",
+      "sameAs": [
+        "https://twitter.com/resonance_theme",
+        "https://facebook.com/resonance-theme",
+        "https://instagram.com/resonance-theme"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "support@resonance-theme.com"
+      }
+    }
+    </script>
+  </head>
+  <body >
+    <!-- ===== HEADER / HERO SECTION ===== -->
+    <header class="flex relative flex-col justify-between py-5 h-auto md:h-[100vh] bg-[url('https://images.pexels.com/photos/9616964/pexels-photo-9616964.jpeg')] bg-no-repeat bg-center bg-cover px-10 md:pt-20">
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="z-50 md:hidden absolute top-5 right-10 flex flex-col gap-1.5 cursor-pointer">
+        <span class="w-6 h-0.5 bg-white block transition-all duration-300" id="line1"></span>
+        <span class="w-6 h-0.5 bg-white block transition-all duration-300" id="line2"></span>
+        <span class="w-6 h-0.5 bg-white block transition-all duration-300" id="line3"></span>
+      </button>
+      <!-- Mobile Menu Overlay -->
+      <div id="mobileMenuOverlay" class="fixed inset-0 bg-black/50 z-30 hidden transition-opacity duration-300"></div>
+      <!-- Mobile Menu (Slides from left) -->
+      <nav id="mobileMenu" class="fixed left-0 top-0 h-[100vh] w-64 bg-indigo-900 text-white p-10 z-40 transform -translate-x-full transition-transform duration-300 flex flex-col gap-8 md:hidden">
+        <div class="flex flex-col gap-6">
+          <a href="/" class="text-white hover:text-gray-300 text-lg font-semibold">Estudio</a>
+          <a href="#" class="text-white hover:text-gray-300 text-lg">Experiencia</a>
+          <a href="#" class="text-white hover:text-gray-300 text-lg">Trabajos</a>
+          <a href="#" class="text-white hover:text-gray-300 text-lg">Testimoniales</a>
+          <a href="#" class="text-white hover:text-gray-300 text-lg font-semibold border-t pt-6">Contacto</a>
+        </div>
+      </nav>
+      <!-- Navigation Bar (Hidden on Mobile) -->
+      <nav id="navbar" class="absolute hidden top-0 left-0 w-full z-50 md:flex items-center justify-between px-12 py-6 transition-all duration-300">
+        <div class="text-xl font-bold tracking-tighter uppercase">
+          <a href="/" class="text-white hover:text-gray-300 transition-colors">
+            Estudio<span class="text-blue-500">.</span>
+          </a>
+        </div>
+
+        <div class="hidden md:flex items-center bg-white/5 backdrop-blur-md border border-white/10 px-8 py-3 rounded-full gap-10">
+          <a href="#experiencia" class="text-xs uppercase tracking-[0.2em] text-gray-200 hover:text-white transition-all">Experiencia</a>
+          <a href="#trabajos" class="text-xs uppercase tracking-[0.2em] text-gray-200 hover:text-white transition-all">Trabajos</a>
+          <a href="#testimoniales" class="text-xs uppercase tracking-[0.2em] text-gray-200 hover:text-white transition-all">Testimoniales</a>
+        </div>
+
+        <div>
+          <a href="#contacto" class="group relative inline-flex items-center overflow-hidden border border-white px-8 py-2 font-medium text-white transition-all hover:bg-white hover:text-black">
+            <span class="text-xs uppercase tracking-widest">Contacto</span>
+          </a>
+        </div>
+      </nav>
+      <!-- End Navigation -->
+
+      <!-- Hero Content - Main Title & CTA Button -->
+      <div class="flex flex-col gap-10 justify-start md:mt-10"> 
+        <h2 class="text-white text-2xl md:text-5xl font-semibold md:w-[60%] text-left">Diseñamos espacios arquitectónicos de alto impacto para quienes buscan diferenciarse con estilo, funcionalidad y visión de futuro.</h2>
+        <a href="" class="px-3 py-4 font-semibold w-52 text-black bg-gray-100 rounded-full relative">Solicitar Proyecto<div class="after after:bg-indigo-500 hover:after:bg-indigo-400 after:absolute after:w-10 after:h-10 after:rounded-full after:right-[5px] after:top-[8px]"></div></a>
+      </div>
+      <!-- Hero Section Main Title -->
+      <h1 class="font-bold text-3xl lg:text-[8rem] text-white uppercase mt-15">Estudio Arquitectura</h1>
+    </header>
+    <!-- ===== END HEADER ===== -->
+
+    <main class="flex flex-col overflow-hidden">
+      <!-- ===== ABOUT US SECTION ===== -->
+      <section class="flex flex-col md:flex-row border-b-3 border-b-gray-200 mb-5 h-auto">
+        
+        <!-- Left Column - Key Stats -->
+        <div class="p-15 flex flex-col gap-5 justify-between w-full md:w-4/12 border-b-3 border-b-gray-200 md:border-b-0 md:border-r-3 md:border-r-gray-200 h-auto" data-aos="fade-in" data-aos-delay="300">
+            <p class="text-indigo-500 font-bold">Sobre Nosotros</p>
+            <h3 class="text-6xl font-bold">$85<span class="text-indigo-500">+</span></h3>
+            <p class="text-gray-600/80 italic text-md w-7/12 font-bold">— proyectos residenciales, comerciales y reformas entregadas con éxito.</p>
+        </div>
+
+        <!-- Right Column - About Description & CTA -->
+        <div class="flex flex-col gap-5 w-full md:w-8/12 p-15 h-auto">
+          <h3 class="text-2xl md:text-4xl font-semibold text-neutral-700 md:w-2xl">Creamos arquitectura para quienes valoran el diseño,  <span class="text-black">la calidad constructiva y espacios pensados para durar.</span></h3>
+            <a href="" class="px-5 py-2 bg-black rounded-full text-white font-semibold inline-block w-fit">Conocer el Estudio</a>
+        </div>
+      </section>
+
+      <!-- ===== SERVICES CARDS SECTION ===== -->
+      <div class="flex flex-col md:flex-row px-10 py-5 justify-between gap-5" >
+        
+        <!-- Service Card 1 -->
+        <div class="border border-gray-300 rounded-2xl flex flex-col justify-between gap-3 items-start p-5 w-11/12" data-aos="fade-up" data-aos-delay="300">
+          <span class="w-12 h-12 bg-gray-300 rounded-full mb-5"></span>
+          <h3 class="pb-5 font-bold text-xl border-b-2 border-b-gray-200 w-full">Diseño Arquitectónico</h3>
+          <p class="text-gray-700">Desarrollamos proyectos personalizados que integran estética, funcionalidad y eficiencia en cada detalle.</p>
+          <a href="/" class="underline font-semibold">Ver mas</a>
+        </div>
+        
+        <!-- Service Card 2 -->
+        <div class="border border-gray-300 rounded-2xl flex flex-col justify-between gap-3 items-start p-5 w-11/12" data-aos="fade-up" data-aos-delay="400">
+          <span class="w-12 h-12 bg-gray-300 rounded-full mb-5"></span>
+          <h3 class="pb-5 font-bold text-xl border-b-2 border-b-gray-200 w-full">Remodelaciones Integrales</h3>
+          <p class="text-gray-700">Transformamos viviendas y espacios comerciales mejorando distribución, iluminación y confort.</p>
+          <a href="/" class="underline font-semibold">Ver mas</a>
+        </div>
+        
+        <!-- Service Card 3 -->
+        <div class="border border-gray-300 rounded-2xl flex flex-col justify-between gap-3 items-start p-5 w-11/12" data-aos="fade-up" data-aos-delay="500">
+          <span class="w-12 h-12 bg-gray-300 rounded-full mb-5"></span>
+          <h3 class="pb-5 font-bold text-xl border-b-2 border-b-gray-200 w-full">Dirección de Obra</h3>
+          <p class="text-gray-700">Supervisamos cada etapa del proyecto para garantizar calidad, tiempos y resultados impecables.</p>
+          <a href="/" class="underline font-semibold">Ver mas</a>
+        </div>
+
+      </div>
+
+      <!-- ===== PORTFOLIO/WORKS SECTION ===== -->
+      <section class="flex flex-col gap-10 bg-indigo-100/50 w-[98%] mx-auto rounded-2xl p-10 pb-30">
+        <!-- Portfolio Section Header -->
+        <div class="flex flex-col md:flex-row justify-between py-10 border-b-2 border-b-gray-300">
+          <!-- Subheading -->
+          <div class="w-6/12 flex items-center">
+            <p class="font-semibold text-gray-600 md:w-1/3 italic mb-5 md:mb-0">— Espacios diseñados para habitar mejor.</p>
+          </div>
+          <!-- Main Title -->
+          <h2 class="text-2xl md:text-4xl text-gray-600 font-semibold md:w-2xl md:mb-5" data-aos="fade-up">Creamos proyectos donde el diseño se une con la precisión técnica y la <span class="text-black">identidad de cada cliente.</span></h2>
+        </div>
+
+        <!-- Portfolio Grid - 3 Columns on Desktop -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-0">
+
+          <!-- Portfolio Item 1 -->
+          <article class="flex flex-col justify-between gap-1 mx-auto w-full md:w-5/6 cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative h-92  rounded-xl bg-gray-200/50 overflow-hidden">
+                <img src="https://images.pexels.com/photos/10951145/pexels-photo-10951145.jpeg" class="w-full h-full object-cover hover:scale-110 duration-500 transition-all" alt="imagen de fondo">
+                <a href="/" class="absolute bottom-5 right-5 bg-indigo-500 text-gray-100 rounded-full px-5 py-2 font-bold">Octubre 2025</a>
+            </div>
+            <div class="flex flex-col gap-1 px-1">
+              <h3 class="font-bold text-md mt-3">Cada Horizonte</h3>
+              <p class="text-xs text-gray-600">Arquitectura Residencial • Dirección de Obra</p>
+            </div>
+          </article>
+
+          <!-- Portfolio Item 2 -->
+          <article class="flex flex-col justify-between gap-1 mx-auto w-full md:w-5/6 cursor-pointer" data-aos="fade-up" data-aos-delay="400">
+            <div class="relative h-92 rounded-xl bg-gray-200/50 overflow-hidden">
+                <img src="https://images.pexels.com/photos/28652350/pexels-photo-28652350.jpeg" class="w-full h-full object-cover hover:scale-110 duration-500 transition-all" alt="imagen de fondo">
+                <a href="/" class="absolute bottom-5 right-5 bg-indigo-500 text-gray-100 rounded-full px-5 py-2 font-bold">Enero 2026</a>
+            </div>
+            <div class="flex flex-col gap-1 px-1">
+              <h3 class="font-bold text-md mt-3">Oficinas Urban Hub</h3>
+              <p class="text-xs text-gray-600">Espacios Corporativos • Interiorismo</p>
+            </div>
+          </article>
+
+          <!-- Portfolio Item 3 -->
+          <article class="flex flex-col justify-between gap-1 mx-auto w-full md:w-5/6 cursor-pointer" data-aos="fade-up" data-aos-delay="500">
+            <div class="relative h-92  rounded-xl bg-gray-200/50 overflow-hidden">
+                <img src="https://images.pexels.com/photos/4412921/pexels-photo-4412921.jpeg" class="w-full h-full object-cover hover:scale-110 duration-500 transition-all" alt="imagen de fondo">
+                <a href="/" class="absolute bottom-5 right-5 bg-indigo-500 text-gray-100 rounded-full px-5 py-2 font-bold">Abril 2026</a>
+            </div>
+            <div class="flex flex-col gap-1 px-1">
+              <h3 class="font-bold text-md mt-3">Patio Central</h3>
+              <p class="text-xs text-gray-600">Remodelación Integral • Diseño Interior</p>
+            </div>
+          </article>
+
+        </section>
+      </section>
+
+      <!-- ===== WHAT WE DO SECTION (ACCORDION) ===== -->
+      <section class="mt-5 flex flex-col gap-5">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row justify-between items-center w-[90%] mx-auto border-b-2 border-b-gray-300 pb-10" data-aos="fade-up">          
+            <h2 class="text-black text-2xl md:text-5xl md:w-3xl font-semibold">No trabajamos con fórmulas repetidas.
+              <span class="text-gray-500"> Cada proyecto nace desde cero y responde a necesidades reales.</span></h2>
+            <div class="py-10 md:p-5">
+              <h4 class="text-indigo-500 font-bold uppercase">Que hacemos</h4>
+              <p class="text-gray-400 font-semibold italic">— porque cada espacio merece algo más que lo convencional.</p>
+            </div>
+          </div>
+
+          <!-- Accordion Content & Image -->
+          <div class="flex flex-col md:flex-row justify-between"  data-aos="fade-left" >
+            <!-- Accordion Items -->
+            <div class="flex flex-col gap-10 p-10 w-full md:w-2/4">
+
+              <!-- Accordion Item 1 -->
+              <details class="group border-b border-gray-300 py-4 outline-none">
+                  <summary class="flex cursor-pointer list-none items-center justify-between gap-5">
+                    <div class="flex items-center gap-5">
+                      <p class="text-xl font-bold text-gray-500">01</p>
+                      <h2 class="font-semibold text-2xl">Concepto y Anteproyecto</h2>
+                      
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 transition-transform duration-300 group-open:rotate-180">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                        </svg>
+                    </div>
+                  </summary>
+                  
+                  <div class="mt-5 text-gray-500">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem vel fugit distinctio quia cupiditate rerum laborum esse, aliquam hic laboriosam fuga ullam facere nostrum in?</p>
+                  </div>
+              </details>
+
+              <!-- Accordion Item 2 -->
+              <details class="group border-b border-gray-300 py-4 outline-none">
+                  <summary class="flex cursor-pointer list-none items-center justify-between gap-5">
+                    <div class="flex items-center gap-5">
+                      <p class="text-xl font-bold text-gray-500">02</p>
+                      <h2 class="font-semibold text-2xl">Proyecto Ejecutivo</h2>
+                      
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 transition-transform duration-300 group-open:rotate-180">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                        </svg>
+                    </div>
+                  </summary>
+                  
+                  <div class="mt-5 text-gray-500">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem vel fugit distinctio quia cupiditate rerum laborum esse, aliquam hic laboriosam fuga ullam facere nostrum in?</p>
+                  </div>
+              </details>
+
+              <!-- Accordion Item 3 -->
+              <details class="group border-b border-gray-300 py-4 outline-none">
+                  <summary class="flex cursor-pointer list-none items-center justify-between gap-5">
+                    <div class="flex items-center gap-5">
+                      <p class="text-xl font-bold text-gray-500">03</p>
+                      <h2 class="font-semibold text-2xl">Obra y Seguimiento</h2>
+                      
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 transition-transform duration-300 group-open:rotate-180">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                        </svg>
+                    </div>
+                  </summary>
+                  
+                  <div class="mt-5 text-gray-500">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem vel fugit distinctio quia cupiditate rerum laborum esse, aliquam hic laboriosam fuga ullam facere nostrum in?</p>
+                  </div>
+              </details>
+
+            </div>
+
+            <!-- Accordion Image Placeholder -->
+            <div class="p-5 flex items-center justify-center w-full md:w-2/4">
+               <div class="w-full max-w-sm mx-auto aspect-[3/4] rounded-2xl overflow-hidden bg-gray-200">
+                <img src="https://images.pexels.com/photos/5476050/pexels-photo-5476050.jpeg" alt="Imagen" class="w-full h-full object-cover">
+               </div>
+            </div>
+          </div>
+      </section>
+
+      <!-- ===== TESTIMONIALS SECTION ===== -->
+      <section class="flex flex-col bg-indigo-50/15">
+        
+        <!-- Testimonials Layout - Image & Content -->
+        <div class="flex flex-col-reverse lg:flex-row justify-between px-5" data-aos="fade-right">
+          <!-- Testimonials Image -->
+          <div class="m-auto mb-20 md:m-10 w-full max-w-sm aspect-[3/4] bg-gray-400 rounded-2xl overflow-hidden">
+              <img src="https://images.pexels.com/photos/7888716/pexels-photo-7888716.jpeg" alt="imagen" class="w-full h-full object-coverr">
+          </div>
+
+          <!-- Testimonials Content -->
+          <div class="flex flex-col p-5">
+            <p class="text-gray-500 italic text-md font-semibold">— design for impact, not approval</p>
+            <h2 class="text-2xl w-sm md:text-5xl md:w-2xl font-semibold">Diseñamos espacios funcionales, <br><span class="text-gray-500">modernos y pensados para mejorar la vida de quienes los habitan.</span></h2>
+            
+            <!-- Section Header -->
+            <div class="flex justify-between mt-15 border-b border-b-gray-300 pb-5">
+              <p class="text-gray-500 italic">Lo que dicen nuestros clientes</p>
+              <p class="text-indigo-500 underline font-semibold"> Ver más </p>
+            </div>
+            <!-- Testimonials Container -->
+            <div class="flex w-full gap-5 mt-15">
+                <!-- Testimonial 1 -->
+                <div class="text-gray-800 italic font-bold w-sm flex flex-col justify-between">
+                  <p>“Profesionalismo total desde el primer plano hasta la entrega. Superaron nuestras expectativas.”</p>
+                  <p class="mt-5 text-gray-500 font-thin">Javier Romero, Cliente Particular</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="text-gray-800 italic font-bold w-sm flex flex-col justify-between">
+                  <p>“Interpretaron nuestra idea a la perfección y la convirtieron en una casa luminosa, moderna y funcional.”</p>
+                  <p class="mt-5 text-gray-500 font-thin">— María González, Propietaria</p>
+                </div>
+              </div>
+            <!-- End Testimonials -->
+          </div>
+          
+        </div>
+
+      </section>
+
+      <!-- ===== FOOTER SECTION ===== -->
+      <footer class="bg-black/90 text-white py-15 mt-20">
+        <div class="max-w-7xl mx-auto px-10">
+
+          <!-- Footer Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-15 border-b border-gray-700 pb-15">
+
+            <!-- Marca -->
+            <div class="flex flex-col gap-5">
+              <h3 class="text-2xl font-bold text-white">Estudio</h3>
+
+              <p class="text-gray-400 text-sm">
+                Estudio de arquitectura especializado en viviendas, reformas y espacios comerciales contemporáneos.
+              </p>
+
+              <div class="flex gap-4 mt-3">
+                <a href="#" class="text-gray-400 hover:text-indigo-500 transition">Fb</a>
+                <a href="#" class="text-gray-400 hover:text-indigo-500 transition">Ig</a>
+                <a href="#" class="text-gray-400 hover:text-indigo-500 transition">In</a>
+                <a href="#" class="text-gray-400 hover:text-indigo-500 transition">Be</a>
+              </div>
+            </div>
+
+            <!-- Servicios -->
+            <div class="flex flex-col gap-5">
+              <h4 class="font-bold text-white text-lg">Servicios</h4>
+
+              <ul class="space-y-2 text-gray-400 text-sm">
+                <li><a href="#" class="hover:text-indigo-500 transition">Diseño Arquitectónico</a></li>
+                <li><a href="#" class="hover:text-indigo-500 transition">Remodelaciones</a></li>
+                <li><a href="#" class="hover:text-indigo-500 transition">Interiorismo</a></li>
+                <li><a href="#" class="hover:text-indigo-500 transition">Dirección de Obra</a></li>
+                <li><a href="#" class="hover:text-indigo-500 transition">Consultoría Técnica</a></li>
+              </ul>
+            </div>
+
+            <!-- Empresa -->
+            <div class="flex flex-col gap-5">
+              <h4 class="font-bold text-white text-lg">Empresa</h4>
+
+              <ul class="space-y-2 text-gray-400 text-sm">
+                <li><a href="#" class="hover:text-indigo-500 transition">Sobre Nosotros</a></li>
+                <li><a href="#" class="hover:text-indigo-500 transition">Proyectos</a></li>
+                <li><a href="#" class="hover:text-indigo-500 transition">Clientes</a></li>
+                <li><a href="#" class="hover:text-indigo-500 transition">Blog</a></li>
+                <li><a href="#" class="hover:text-indigo-500 transition">Contacto</a></li>
+              </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div class="flex flex-col gap-5">
+              <h4 class="font-bold text-white text-lg">Contacto</h4>
+
+              <div class="space-y-3 text-gray-400 text-sm">
+
+                <div>
+                  <p class="font-semibold text-white">Email</p>
+                  <a href="mailto:hola@estudioarq.com" class="hover:text-indigo-500 transition">
+                    hola@estudioarq.com
+                  </a>
+                </div>
+
+                <div>
+                  <p class="font-semibold text-white">Teléfono</p>
+                  <a href="tel:+541112345678" class="hover:text-indigo-500 transition">
+                    +54 11 1234 5678
+                  </a>
+                </div>
+
+                <div>
+                  <p class="font-semibold text-white">Dirección</p>
+                  <p>Buenos Aires, Argentina</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Footer Bottom -->
+          <div class="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+
+            <p>&copy; 2026 Estudio Arquitectura. Todos los derechos reservados.</p>
+
+            <div class="flex gap-8 mt-5 md:mt-0">
+              <a href="#" class="hover:text-indigo-500 transition">Política de Privacidad</a>
+              <a href="#" class="hover:text-indigo-500 transition">Términos y Condiciones</a>
+              <a href="#" class="hover:text-indigo-500 transition">Cookies</a>
+            </div>
+
+          </div>
+
+        </div>
+      </footer>
+      <!-- ===== END FOOTER ===== -->
+    </main>
+    
+    <!-- ===== SCRIPTS ===== -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+RESONANCE THEME - LICENSE AGREEMENT
+
+Version 1.0 | Last Updated: April 16, 2026
+
+===============================================================================
+TERMS AND CONDITIONS
+===============================================================================
+
+GRANT OF LICENSE
+You are granted a non-exclusive, worldwide, royalty-free license to use this
+Resonance Theme for personal and commercial purposes, subject to the conditions
+outlined in this agreement.
+
+PERMITTED USES
+✓ Install and use on unlimited websites (personal or commercial)
+✓ Modify the theme to suit your needs
+✓ Use on client projects
+✓ Use in commercial applications
+✓ Build derivative works based on the theme
+✓ Private distribution to team members working on your project
+
+PROHIBITED USES
+✗ Redistribute or resell the original theme files
+✗ Include the theme in any publicly available marketplace or repository
+✗ Claim authorship of the original theme
+✗ Remove or alter copyright notices and attributions
+✗ Use the theme to create competing products or services
+✗ Share your license key or download links with others
+✗ Use for illegal or unethical purposes
+
+INTELLECTUAL PROPERTY
+The Resonance Theme, including all code, design, graphics, and documentation,
+is the intellectual property of the original author and is protected by
+copyright law. All rights are reserved except as specifically granted herein.
+
+MODIFICATIONS
+You are permitted to modify the theme to customize it for your needs. However,
+modified versions must clearly indicate that they are based on the Resonance
+Theme and retain the original copyright notice.
+
+THIRD-PARTY COMPONENTS
+The Resonance Theme includes or uses the following third-party libraries:
+
+1. Tailwind CSS (MIT License)
+   - URL: https://tailwindcss.com/
+   - License: MIT
+
+2. Vite (MIT License)
+   - URL: https://vitejs.dev/
+   - License: MIT
+
+3. AOS - Animate On Scroll (MIT License)
+   - URL: https://michalsnik.github.io/aos/
+   - License: MIT
+
+4. Pexels Images (Free License)
+   - URL: https://www.pexels.com/
+   - License: Free for personal and commercial use
+
+These components retain their original licenses and attributions.
+
+TECHNICAL SUPPORT
+Support is provided as-is. While the author will make efforts to address
+critical issues and provide guidance, support is limited and provided on a
+best-effort basis.
+
+WARRANTY DISCLAIMER
+THIS THEME IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR BE LIABLE
+FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE THEME OR THE
+USE OR OTHER DEALINGS IN THE THEME.
+
+LIMITATION OF LIABILITY
+The author shall not be liable for any indirect, incidental, special,
+consequential, or punitive damages, including but not limited to damages for
+loss of profits, goodwill, use, data, or other intangible losses resulting from:
+- The use or inability to use the theme
+- Unauthorized access or alteration of the theme
+- Third-party conduct or content
+- Any other matter relating to the theme
+
+INDEMNIFICATION
+You agree to indemnify and hold harmless the author from any claims,
+liabilities, costs, and expenses arising from:
+- Your use of the theme
+- Your violation of this license
+- Your infringement of any third-party rights
+- Your use of the theme in violation of applicable laws
+
+TERMINATION
+This license is effective until terminated. Your rights under this license will
+automatically terminate without notice if you breach any provision. Upon
+termination, you must cease all use of the theme and destroy all copies in your
+possession.
+
+SEVERABILITY
+If any provision of this license is found to be invalid or unenforceable, the
+remaining provisions shall remain in full force and effect.
+
+ENTIRE AGREEMENT
+This license constitutes the entire agreement between you and the author
+regarding the theme and supersedes all prior and contemporaneous agreements,
+representations, and understandings.
+
+GOVERNING LAW
+This license is governed by and construed in accordance with the laws of Spain,
+and you irrevocably consent to the exclusive jurisdiction of the courts in
+that location.
+
+CONTACT & SUPPORT
+For inquiries, support requests, or questions about this license, please contact:
+- Email: support@resonance-theme.com
+- Website: https://resonance-theme.com/
+
+===============================================================================
+ACCEPTANCE
+By using the Resonance Theme, you acknowledge that you have read this license
+agreement, understand its terms and conditions, and agree to be bound by them.
+If you do not agree with any part of this license, you may not use the theme.
+===============================================================================
+
+© 2026 Resonance Theme. All rights reserved.

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resonance - Documentación del Theme</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        nav {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #764ba2;
+        }
+        
+        .section {
+            background-color: white;
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        h3 {
+            color: #764ba2;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        h4 {
+            color: #555;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        
+        pre {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        pre code {
+            color: #f8f8f2;
+            background: none;
+            padding: 0;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        
+        .info {
+            background-color: #cfe2ff;
+            padding: 15px;
+            border-left: 4px solid #0d6efd;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        
+        .success {
+            background-color: #d1e7dd;
+            padding: 15px;
+            border-left: 4px solid #198754;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        table th {
+            background-color: #667eea;
+            color: white;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .file-structure {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin-bottom: 15px;
+            white-space: pre;
+            overflow-x: auto;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #764ba2;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .toc {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .toc h3 {
+            margin-top: 0;
+        }
+        
+        .toc ol {
+            margin-left: 20px;
+        }
+        
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>�️ Resonance Theme</h1>
+        <p style="font-size: 0.9rem; margin-top: 10px;">Versión 1.0.0</p>
+    </header>
+    
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#instalacion">Instalación</a></li>
+                <li><a href="#estructura">Estructura</a></li>
+                <li><a href="#personalizacion">Personalización</a></li>
+                <li><a href="#secciones">Secciones</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#soporte">Soporte</a></li>
+            </ul>
+        </nav>
+        
+        <!-- INTRODUCCIÓN -->
+        <section class="section" id="introduccion">
+            <h2>📖 Introducción</h2>
+                
+            <h3>✨ Características Principales</h3>
+            <ul>
+                <li><strong>Diseño Totalmente Responsivo</strong> - Se adapta perfectamente a dispositivos móviles, tablets y escritorios</li>
+                <li><strong>Tailwind CSS</strong> - Framework de CSS moderno con utilidades altamente personalizables</li>
+                <li><strong>Animaciones Suaves</strong> - Integración con AOS (Animate On Scroll) para efectos dinámicos</li>
+                <li><strong>Menú Hamburguesa</strong> - Navegación inteligente para dispositivos móviles</li>
+                <li><strong>Glassmorphism</strong> - Diseño moderno con efectos de vidrio esmerilado</li>
+                <li><strong>Código Limpio</strong> - HTML y CSS bien estructurados y comentados</li>
+                <li><strong>SEO Optimizado</strong> - Meta tags y estructura semántica completa</li>
+                <li><strong>Alto Rendimiento</strong> - Optimizado para velocidad de carga rápida</li>
+            </ul>
+            
+            <h3>📋 Requisitos del Sistema</h3>
+            <ul>
+                <li>Navegador web moderno (Chrome, Firefox, Safari, Edge)</li>
+                <li>Conexión a Internet (para cargar librerías externas)</li>
+                <li>Servidor web (Apache, Nginx, etc.) para hosting</li>
+            </ul>
+        </section>
+        
+        <!-- INSTALACIÓN -->
+        <section class="section" id="instalacion">
+            <h2>🚀 Instalación y Configuración</h2>
+            
+            <h3>Opción 1: Instalación Simple (Recomendado)</h3>
+            <p>Si solo deseas usar el theme compilado sin modificar el código:</p>
+            
+            <ol>
+                <li>Extrae todos los archivos en tu servidor web</li>
+                <li>Abre el archivo <code>index.html</code> en tu navegador</li>
+                <li>¡Listo! El theme está funcionando</li>
+            </ol>
+            
+            <div class="success">
+                <strong>✓ Nota:</strong> No necesitas instalar Node.js o cualquier otra dependencia. Los archivos ya están compilados y listos para usar.
+            </div>
+            
+            <h3>Opción 2: Desarrollo Avanzado (Con Node.js)</h3>
+            <p>Si deseas modificar el código y compilar cambios:</p>
+            
+            <ol>
+                <li>Asegúrate de tener Node.js v16+ instalado</li>
+                <li>Instala las dependencias:
+                    <pre><code>npm install</code></pre>
+                </li>
+                <li>Inicia el servidor de desarrollo:
+                    <pre><code>npm run dev</code></pre>
+                </li>
+                <li>El tema estará disponible en <code>http://localhost:5173</code></li>
+            </ol>
+            
+            <h3>Compilación para Producción</h3>
+            <pre><code>npm run build</code></pre>
+            <p>Los archivos optimizados se generarán en la carpeta <code>dist/</code></p>
+            
+            <h3>Requisitos para Desarrollo</h3>
+            <ul>
+                <li><strong>Node.js</strong> - v16 o superior</li>
+                <li><strong>npm</strong> - Incluido con Node.js</li>
+                <li><strong>Editor de código</strong> - VS Code, Sublime Text, etc.</li>
+            </ul>
+        </section>
+        
+        <!-- ESTRUCTURA DE ARCHIVOS -->
+        <section class="section" id="estructura">
+            <h2>📁 Estructura de Archivos</h2>
+            
+            <p>Aquí se muestra la estructura completa del proyecto:</p>
+            
+            <div class="file-structure">resonance-theme/
+├── index.html                 # Archivo principal del theme
+├── documentation.html         # Este archivo
+├── package.json              # Configuración y dependencias
+├── vite.config.js            # Configuración de Vite
+├── tailwind.config.js        # Configuración de Tailwind CSS
+├── src/
+│   ├── main.js               # Código JavaScript principal
+│   ├── style.css             # Estilos CSS personalizados
+│   └── assets/               # Recursos del proyecto
+│       ├── images/           # Imágenes y fotos
+│       └── icons/            # Iconos SVG
+├── public/                   # Archivos estáticos
+│   └── favicon.svg           # Favicon del sitio
+├── dist/                     # Build compilado (generado)
+├── node_modules/             # Dependencias (generado)
+├── README.md                 # Información del proyecto
+├── LICENSE.txt               # Licencia
+└── .gitignore               # Archivos ignorados por Git
+            </div>
+            
+            <h3>Descripción de Carpetas Principales</h3>
+            <table>
+                <tr>
+                    <th>Carpeta/Archivo</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td><code>src/</code></td>
+                    <td>Código fuente del proyecto (JavaScript y CSS)</td>
+                </tr>
+                <tr>
+                    <td><code>public/</code></td>
+                    <td>Archivos estáticos que se copian tal cual al build</td>
+                </tr>
+                <tr>
+                    <td><code>dist/</code></td>
+                    <td>Archivos compilados y optimizados para producción</td>
+                </tr>
+                <tr>
+                    <td><code>node_modules/</code></td>
+                    <td>Librerías y dependencias instaladas (no editar)</td>
+                </tr>
+            </table>
+        </section>
+        
+        <!-- PERSONALIZACIÓN -->
+        <section class="section" id="personalizacion">
+            <h2>🎨 Personalización</h2>
+            
+            <h3>Cambiar Colores Principales</h3>
+            <p>Los colores principales se encuentran en el archivo <code>src/style.css</code>. Busca las variables CSS:</p>
+            
+            <pre><code>:root {
+  --primary-color: #667eea;
+  --secondary-color: #764ba2;
+  --accent-color: #f093fb;
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --bg-light: #f8f9fa;
+}
+            </code></pre>
+            
+            <p>Modifica estos valores para cambiar la paleta de colores del tema.</p>
+            
+            <h3>Cambiar Fuentes</h3>
+            <p>Para cambiar las fuentes, edita el archivo <code>index.html</code> en la sección <code>&lt;head&gt;</code>:</p>
+            
+            <pre><code>&lt;link href="https://fonts.googleapis.com/css2?family=YOUR_FONT:wght@400;600;700&display=swap" rel="stylesheet"&gt;</code></pre>
+            
+            <p>Luego actualiza el <code>font-family</code> en <code>src/style.css</code>.</p>
+            
+            <h3>Cambiar Logo y Branding</h3>
+            <ul>
+                <li>Reemplaza el texto "Estudio" en la barra de navegación por tu nombre de marca</li>
+                <li>Cambia el favicon en <code>public/favicon.svg</code></li>
+                <li>Actualiza el título de la página en <code>&lt;title&gt;</code></li>
+                <li>Modifica las imágenes de fondo en cada sección</li>
+            </ul>
+            
+            <h3>Cambiar Secciones y Contenido</h3>
+            <p>El contenido está organizado en secciones dentro del <code>index.html</code>:</p>
+            
+            <pre><code>// Secciones principales:
+- Header/Hero
+- Experiencia
+- Trabajos
+- Testimoniales
+- Contacto
+            </code></pre>
+            
+            <p>Puedes editar el texto, imágenes y estructura de cada sección directamente en el HTML.</p>
+            
+            <h3>Personalización Avanzada</h3>
+            <p>Si necesitas realizar cambios más avanzados:</p>
+            <ol>
+                <li>Edita los archivos en la carpeta <code>src/</code></li>
+                <li>Ejecuta <code>npm run build</code> para compilar</li>
+                <li>Los archivos compilados aparecerán en la carpeta <code>dist/</code></li>
+            </ol>
+        </section>
+        
+        <!-- SECCIONES DEL THEME -->
+        <section class="section" id="secciones">
+            <h2>🔧 Secciones del Theme</h2>
+            
+            <h3>1. Header / Hero Section</h3>
+            <p>La primera sección que ven los visitantes. Incluye:</p>
+            <ul>
+                <li>Imagen de fondo profesional</li>
+                <li>Logo y branding</li>
+                <li>Barra de navegación principal</li>
+                <li>Botón de llamada a la acción (CTA)</li>
+                <li>Menú hamburguesa para móvil</li>
+            </ul>
+            
+            <h4>Código Relevante:</h4>
+            <pre><code>&lt;header&gt;
+  &lt;!-- Botón menú mobile --&gt;
+  &lt;button id="menuBtn"&gt;...&lt;/button&gt;
+  
+  &lt;!-- Navegación --&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+            
+            <h3>2. Experiencia</h3>
+            <p>Sección para mostrar servicios, experiencia y capacidades. Ideal para describir:</p>
+            <ul>
+                <li>Años de experiencia</li>
+                <li>Servicios ofrecidos</li>
+                <li>Habilidades técnicas</li>
+                <li>Logros destacados</li>
+            </ul>
+            
+            <h3>3. Trabajos / Portafolio</h3>
+            <p>Galería de proyectos completados. Recomendamos:</p>
+            <ul>
+                <li>Mínimo 6 proyectos de ejemplo</li>
+                <li>Imágenes de alta calidad</li>
+                <li>Breve descripción de cada proyecto</li>
+                <li>Links a proyectos en vivo (opcional)</li>
+            </ul>
+            
+            <h3>4. Testimoniales</h3>
+            <p>Opiniones de clientes satisfechos:</p>
+            <ul>
+                <li>Fotografía del cliente</li>
+                <li>Nombre y cargo</li>
+                <li>Testimonio (máx 2-3 líneas)</li>
+                <li>Calificación (estrellas)</li>
+            </ul>
+            
+            <h3>5. Contacto</h3>
+            <p>Formulario o información de contacto. Incluye:</p>
+            <ul>
+                <li>Formulario funcional</li>
+                <li>Información de contacto (email, teléfono)</li>
+                <li>Redes sociales</li>
+                <li>Ubicación (si aplica)</li>
+            </ul>
+        </section>
+        
+        <!-- RESPONSIVE DESIGN -->
+        <section class="section" id="responsive">
+            <h2>📱 Diseño Responsivo</h2>
+            
+            <p>El theme utiliza Tailwind CSS y breakpoints estándar para adaptarse a todos los tamaños de pantalla.</p>
+            
+            <h3>Breakpoints Implementados</h3>
+            <table>
+                <tr>
+                    <th>Dispositivo</th>
+                    <th>Ancho</th>
+                    <th>Clase Tailwind</th>
+                </tr>
+                <tr>
+                    <td>Móvil</td>
+                    <td>0px - 640px</td>
+                    <td><code>default</code></td>
+                </tr>
+                <tr>
+                    <td>Tablet Pequeña</td>
+                    <td>640px - 768px</td>
+                    <td><code>sm:</code></td>
+                </tr>
+                <tr>
+                    <td>Tablet</td>
+                    <td>768px - 1024px</td>
+                    <td><code>md:</code></td>
+                </tr>
+                <tr>
+                    <td>Desktop</td>
+                    <td>1024px - 1280px</td>
+                    <td><code>lg:</code></td>
+                </tr>
+                <tr>
+                    <td>Desktop Grande</td>
+                    <td>1280px+</td>
+                    <td><code>xl:</code></td>
+                </tr>
+            </table>
+            
+            <h3>Prueba de Responsividad</h3>
+            <p>Para probar en diferentes dispositivos:</p>
+            <ol>
+                <li>Abre el tema en tu navegador</li>
+                <li>Presiona <code>F12</code> para abrir Developer Tools</li>
+                <li>Presiona <code>Ctrl+Shift+M</code> para activar vista móvil</li>
+                <li>Prueba en diferentes tamaños de pantalla</li>
+            </ol>
+        </section>
+        
+        <!-- FAQ -->
+        <section class="section" id="faq">
+            <h2>❓ Preguntas Frecuentes (FAQ)</h2>
+            
+            <h3>¿Necesito conocimientos de programación?</h3>
+            <p>No necesariamente. Puedes cambiar texto, imágenes y colores solo editando el HTML. Sin embargo, conocimientos básicos de HTML/CSS te permitirán personalizaciones más avanzadas.</p>
+            
+            <h3>¿Cómo cambio las imágenes de fondo?</h3>
+            <p>En el archivo <code>index.html</code>, busca los elementos con <code>bg-[url(...)]</code> y reemplaza la URL con tu imagen:</p>
+            <pre><code>&lt;div class="bg-[url('tu-imagen.jpg')]"&gt;&lt;/div&gt;</code></pre>
+            
+            <h3>¿Es compatible con navegadores antiguos?</h3>
+            <p>El theme es compatible con navegadores modernos (Chrome, Firefox, Safari, Edge de los últimos 2 años). Para compatibilidad con navegadores más antiguos, se recomienda usar polyfills.</p>
+            
+            <h3>¿Puedo usar este theme comercialmente?</h3>
+            <p>Sí, está incluido en tu licencia de compra. Puedes usarlo en proyectos personales y comerciales.</p>
+            
+            <h3>¿Cómo añado un formulario de contacto funcional?</h3>
+            <p>El theme incluye un formulario HTML básico. Para hacerlo funcional, necesitas:</p>
+            <ol>
+                <li>Usar un servicio como FormSubmit, Netlify Forms, o Firebase</li>
+                <li>O configurar un backend propio</li>
+                <li>Ver la sección <a href="#soporte">Soporte</a> para más detalles</li>
+            </ol>
+            
+            <h3>¿Cómo optimizo el SEO?</h3>
+            <ul>
+                <li>Usa meta tags descriptivos en <code>&lt;head&gt;</code></li>
+                <li>Incluye palabras clave relevantes en los títulos</li>
+                <li>Usa encabezados HTML correctamente (h1, h2, h3)</li>
+                <li>Optimiza las imágenes (comprime y usa alt text)</li>
+                <li>Asegúrate de que el sitio sea rápido</li>
+            </ul>
+            
+            <h3>¿Cómo agrego más secciones?</h3>
+            <p>Copia una sección existente en el <code>index.html</code>, modifica el contenido y añade tu propio estilo si es necesario.</p>
+            
+            <h3>¿Por qué algunas animaciones no se ven en móvil?</h3>
+            <p>Es normal. AOS (Animate On Scroll) se deshabilita automáticamente en dispositivos móviles para mejor rendimiento. Puedes cambiar esto en <code>src/main.js</code>.</p>
+        </section>
+        
+        <!-- SOPORTE Y ACTUALIZACIONES -->
+        <section class="section" id="soporte">
+            <h2>💬 Soporte y Contacto</h2>
+            
+            <h3>Soporte Técnico</h3>
+            <p>Si encuentras problemas técnicos:</p>
+            <ol>
+                <li>Verifica que tienes todas las dependencias instaladas</li>
+                <li>Limpia el cache del navegador (Ctrl+Shift+Delete)</li>
+                <li>Intenta en otro navegador</li>
+                <li>Revisa la consola del navegador (F12) para errores</li>
+            </ol>
+            
+            <h3>Actualizaciones Futuras</h3>
+            <p>Este theme recibe actualizaciones regulares con nuevas características y correcciones de bugs.</p>
+            
+            <h3>Changelog (v1.0.0)</h3>
+            <ul>
+                <li>✅ Versión inicial del theme</li>
+                <li>✅ Diseño totalmente responsivo</li>
+                <li>✅ Animaciones suaves con AOS</li>
+                <li>✅ Menú mobile hamburguesa</li>
+                <li>✅ Tailwind CSS integrado</li>
+                <li>✅ Documentación completa</li>
+            </ul>
+            
+            <h3>Recursos Útiles</h3>
+            <ul>
+                <li><a href="https://tailwindcss.com/docs" target="_blank">Documentación Tailwind CSS</a></li>
+                <li><a href="https://michalsnik.github.io/aos/" target="_blank">Documentación AOS (Animate On Scroll)</a></li>
+                <li><a href="https://vitejs.dev/" target="_blank">Documentación Vite</a></li>
+                <li><a href="https://developer.mozilla.org/es/" target="_blank">MDN Web Docs</a></li>
+            </ul>
+            
+            <h3>Contacto del Desarrollador</h3>
+            <p>Para consultas, sugerencias o reporte de bugs:</p>
+            <ul>
+                <li>📧 Email: <a href="mailto:binaraweb@gmail.com"><code>binaraweb@gmail.com</code></a></li>
+                <li>🐛 Issues: GitHub (si aplica)</li>
+                <li>💬 Chat: Disponible en ThemeForest</li>
+            </ul>
+            
+            <div class="highlight">
+                <strong>⚠️ Importante:</strong> Antes de reportar un problema, asegúrate de haber seguido la documentación completa y de probar en diferentes navegadores.
+            </div>
+        </section>
+        
+        <!-- CRÉDITOS Y LICENCIA -->
+        <section class="section" id="creditos">
+            <h2>📜 Créditos y Licencia</h2>
+            
+            <h3>Tecnologías Utilizadas</h3>
+            <ul>
+                <li><strong>Tailwind CSS</strong> - Framework CSS moderno</li>
+                <li><strong>Vite</strong> - Bundler y servidor de desarrollo</li>
+                <li><strong>AOS (Animate On Scroll)</strong> - Librería de animaciones</li>
+                <li><strong>Pexels</strong> - Imágenes gratuitas de alta calidad</li>
+            </ul>
+            
+            <h3>Licencia</h3>
+            <p>Este theme se proporciona bajo la licencia que especifiques en tu compra en ThemeForest. Consulta el archivo <code>LICENSE.txt</code> para más detalles.</p>
+            
+            <div class="info">
+                <strong>ℹ️ Nota Legal:</strong> Este theme se proporciona "tal cual". El desarrollador no se responsabiliza por daños directos o indirectos derivados del uso del tema.
+            </div>
+        </section>
+        
+        <!-- TABLA DE CONTENIDOS -->
+        <section class="section">
+            <h2>📚 Índice Completo</h2>
+            <div class="toc">
+                <h3>Tabla de Contenidos</h3>
+                <ol>
+                    <li><a href="#introduccion">Introducción y características</a></li>
+                    <li><a href="#instalacion">Instalación y configuración</a></li>
+                    <li><a href="#estructura">Estructura de archivos</a></li>
+                    <li><a href="#personalizacion">Personalización</a></li>
+                    <li><a href="#secciones">Secciones del theme</a></li>
+                    <li><a href="#responsive">Diseño responsivo</a></li>
+                    <li><a href="#faq">Preguntas frecuentes</a></li>
+                    <li><a href="#soporte">Soporte y actualizaciones</a></li>
+                    <li><a href="#creditos">Créditos y licencia</a></li>
+                </ol>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 Resonance Theme. Todos los derechos reservados.</p>
+        <p style="font-size: 0.9rem; margin-top: 10px;">Versión 1.0.0 | Última actualización: 16 de abril de 2026</p>
+    </footer>
+</body>
+</html>

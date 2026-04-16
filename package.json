@@ -1,0 +1,20 @@
+{
+  "name": "resonance-architecture-theme",
+  "version": "1.0.0",
+  "description": "Resonance - Un theme HTML moderno y responsivo para estudios de arquitectura y despachos profesionales",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.0.4"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "aos": "^2.3.4",
+    "tailwindcss": "^4.2.2"
+  }
+}
